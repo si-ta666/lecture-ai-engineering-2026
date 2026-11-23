@@ -68,9 +68,10 @@ def search_glossary(query: str) -> str:
 
 
 def get_lecture_summary(lecture: int) -> str:
-    """指定した回（1始まりの整数）の講義の要点を返す。
+    """指定した講義回の学習内容と重要なポイントを詳しく取得する。
 
-    「第3回では何を学ぶ？」のように、回の内容や関係を聞かれたときに使う。
+    講義のテーマ、学習目標、演習内容を知りたい場合に使用する。
+    lectureには講義回を1始まりの整数で指定する。
     """
     path = DATA_DIR / "lectures" / f"{lecture:02d}.md"
     if not path.exists():
